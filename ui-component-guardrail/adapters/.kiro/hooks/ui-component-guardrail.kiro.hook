@@ -1,0 +1,8 @@
+{
+  "enabled": true,
+  "name": "UI component guardrail",
+  "description": "Runs the UI component guardrail when a component file is saved.",
+  "version": "1",
+  "when": { "type": "fileEdited", "patterns": ["src/components/**/*.tsx"] },
+  "then": { "type": "askAgent", "prompt": "A UI component changed. Apply the UI component guardrail: run all required stages and finish with the summary table. See .kiro/steering/ui-component-guardrail.md." }
+}
